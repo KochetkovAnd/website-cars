@@ -2,13 +2,12 @@
 <div class="container">
     <h1>Поиск и обзоры автомобилей</h1>
     <div class="cardline">
-        <div class="card" *ngFor="let announcement of announcements">
+        <div class="card" *ngFor="let announcement of announcements" routerLink="/announcement/{{announcement.id}}">
             <div class="img-box">
                 <img src="{{announcement.photos[0].url}}" alt="фото автомобиля">
             </div>
             <p class="name">{{announcement.car.manufacturer}} {{announcement.car.model}} {{announcement.car.generation}}</p>
-            <p class="price">{{announcement.price}}₽</p>
-            
+            <p class="price">{{announcement.price}}₽</p>            
         </div>
     </div>
     <div class="cardline"></div>
