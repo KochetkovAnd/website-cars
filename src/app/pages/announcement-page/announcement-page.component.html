@@ -15,6 +15,18 @@
         </div>
     </div>
 
+    <div class="right-container">
+        <p class="name">{{announcement.car.manufacturer}} {{announcement.car.model}} {{announcement.car.generation}}</p>
+        <p class="normal">Кузов : {{announcement.car.bodyType}}</p>
+        <p class="normal">Привод : {{announcement.car.drive}}</p>
+        <p class="normal">Двигатель : {{announcement.car.engine}}</p>
+        <p class="normal">Цвет : {{announcement.color}}</p>
+        <p class="normal">Год выпуска : {{announcement.yearOfManufacture}}</p>
+        <p class="normal">Пробег : {{announcement.mileage}}</p>
+        <p class="normal">Цена : {{announcement.price}}</p>
+        <p class="normal">Описание : {{announcement.sellerDescription}}</p>
+    </div>
+
     <div class="overlay" *ngIf ="current != -1">
         <button id = "button_left" (click) = "left()">
             ⇚

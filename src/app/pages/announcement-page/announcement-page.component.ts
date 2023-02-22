@@ -18,7 +18,7 @@ export class AnnouncementPageComponent {
 
   id = Number(this.route.snapshot.paramMap.get('id'))
   announcement: Announcement | undefined;
-  current = 0
+  current = -1
 
   async ngOnInit() {
     this.announcement = await lastValueFrom(this.httpService.getAnnouncementById(this.id))
