@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0px;
+    padding: 0px;
+    color: #1A161F;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ebe8e8;
+    overflow-x: hidden;
+}
