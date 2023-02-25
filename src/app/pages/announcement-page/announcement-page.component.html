@@ -1,17 +1,11 @@
 <navbar></navbar>
 <div class="container" *ngIf="announcement">
     <div class="left-container">
-        <div class="main-img-box">
-            <img src="{{announcement.photos[0].url}}" (click) = "current = 0">
-        </div>
+        <img class="main-img" src="{{announcement.photos[0].url}}" (click)="current = 0">
         <div class="img-line">
-            <div class="img-box">
-                <img src="{{announcement.photos[1].url}}" (click) = "current = 1">
-            </div>
-            <div class="img-box">
-                <img src="{{announcement.photos[2].url}}" (click) = "current = 2">
-            </div>
-            <div class="img-box more" (click) = "current = 0">Смотреть еще фото</div>
+            <img src="{{announcement.photos[1].url}}" (click)="current = 1">
+            <img src="{{announcement.photos[2].url}}" (click)="current = 2">
+            <div class="img-box more" (click)="current = 0">Смотреть еще фото</div>
         </div>
     </div>
 
@@ -27,18 +21,15 @@
         <p class="normal">Описание : {{announcement.sellerDescription}}</p>
     </div>
 
-    <div class="overlay" *ngIf ="current != -1">
-        <button id = "button_left" (click) = "left()">
+    <div class="overlay" *ngIf="current != -1">
+        <button id="button_left" (click)="left()">
             ⇚
         </button>
-        <div class="popup-img-block">
-            <img src="{{announcement.photos[current].url}}">
-        </div>
-        <button id = "button_right" (click) = "right()">
+        <img src="{{announcement.photos[current].url}}">
+        <button id="button_right" (click)="right()">
             ⇛
         </button>
-        <input type="button" value="x" id = "exit_button" (click) = "exit()">
+        <input type="button" value="x" id="exit_button" (click)="exit()">
     </div>
-
 </div>
-
+<app-footer/>

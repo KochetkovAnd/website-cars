@@ -1,0 +1,12 @@
+<navbar></navbar>
+<div class="container">
+    <div class="filter-container"></div>
+    <div class="card-container">
+        <div class="card" *ngFor = "let announcement of announcements">
+            <img src="{{announcement.photos[0].url}}"/>
+            <div class="left">
+                <p class="name">{{announcement.car.manufacturer}} {{announcement.car.model}} {{announcement.car.generation}}</p>
+            </div>
+        </div>
+    </div>
+</div>

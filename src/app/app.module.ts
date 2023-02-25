@@ -8,13 +8,15 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AnnouncementPageComponent } from './pages/announcement-page/announcement-page.component';
+import { AnnoncementListPageComponent } from './pages/annoncement-list-page/annoncement-list-page.component';
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     NavbarComponent,
     FooterComponent,
-    AnnouncementPageComponent
+    AnnouncementPageComponent,
+    AnnoncementListPageComponent
   ],
   imports: [
     BrowserModule,
