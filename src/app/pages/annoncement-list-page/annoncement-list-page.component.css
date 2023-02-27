@@ -18,7 +18,7 @@
 .filter-container {
     width: 30%;
     height: 100%;
-    background-color: goldenrod;
+    overflow-y: auto;
 }
 
 .card {
@@ -31,19 +31,70 @@
 }
 
 .card img {
-    width: 30%;
+    width: 40%;
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
 }
 
 .card .left {
-    width: 30%;
-    height: 100%;
+    margin: 10px;
+    width: calc(30% - 20px);
+    height: calc(100% - 20px);
+}
+
+.card .right{
+    margin: 10px;
+    width: calc(30% - 20px);
+    height: calc(100% - 20px);
 }
 
 .card .left .name {
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
+}
+
+.card .normal {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.filter {
+    width: calc(100% - 2px);
+    border: 1px solid #4C2C72;
+}
+
+.filter > p {
+    width: calc(100% - 40px); 
+    padding: 20px;
+    font-size: 20px;
+    color: #f1ecec;
+    background: #4C2C72;
+}
+
+.filter-item {
+    display: flex;
+    line-height: 40px;
+    margin-left: 10px;
+}
+
+.filter-item p {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.search-button {
+    margin: 10px 5%;
+    height: 50px;
+    width: 40%;
+    background-color: #9D9CCF;
+    color: #f1ecec;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.search-button:hover {
+    background-color: #8c8bc5;
 }

@@ -1,11 +1,34 @@
 <navbar></navbar>
 <div class="container">
-    <div class="filter-container"></div>
+    <div class="filter-container">
+        <div class="filter" *ngFor="let filter of filters; index as i">
+            <p (click) = "actives[i] = !actives[i]">
+                <ng-container *ngIf="!actives[i]; else elseBlock" >⇓</ng-container>
+                <ng-template #elseBlock>⇑</ng-template>
+                {{filter.name}}
+            </p>
+            <div class="checkbox-block" *ngIf = "actives[i]">
+                <div class="filter-item" *ngFor = "let item of filter.items">
+                    <input type = "checkbox"  [(ngModel)] = "item.isChosen">
+                    <p>{{item.name}}</p>
+                </div>                
+            </div>            
+        </div>
+        <div style="display: flex;">
+            <button class="search-button" (click) = "search()">Найти</button>
+            <button class="search-button" (click) = "drop()">Сбросить фильтры</button>
+        </div>
+    </div>
     <div class="card-container">
-        <div class="card" *ngFor = "let announcement of announcements">
+        <div class="card" *ngFor = "let announcement of announcements" routerLink="/announcement/{{announcement.id}}">
             <img src="{{announcement.photos[0].url}}"/>
             <div class="left">
                 <p class="name">{{announcement.car.manufacturer}} {{announcement.car.model}} {{announcement.car.generation}}</p>
+                <p class="normal">{{announcement.price}}₽</p>
+            </div>
+            <div class="right">
+                <p class="normal">{{announcement.mileage}}км</p>
+                <p class="normal">{{announcement.yearOfManufacture}}г</p>
             </div>
         </div>
     </div>
