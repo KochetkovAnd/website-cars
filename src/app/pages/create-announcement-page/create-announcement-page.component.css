@@ -1,0 +1,134 @@
+.item {
+    width: calc(60% - 20px);
+    height: 100px;
+    margin: 10px 20%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f1ecec;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);    
+}
+
+.big-item {
+    width: calc(60% - 20px);
+    height: 300px;
+    margin: 10px 20%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f1ecec;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);    
+}
+
+.block {
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+.block p {
+    padding: 10px;
+}
+.block select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.normal {
+    padding: 10px;
+}
+
+.item input[type = "text"],.item input[type = "number"] {
+    padding: 10px;
+    font-size: 15px;
+    width: calc(100% - 20px);
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.big-item {
+    width: calc(60% - 20px);
+    height: 300px;
+    margin: 10px 20%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f1ecec;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);    
+}
+
+.big-item textarea {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    width: calc(100% - 20px);
+    height: 240px;
+    outline: none;
+}
+
+.save-button {    
+    margin: 10px 30%;
+    height: 50px;
+    width: 40%;
+    background-color: #9D9CCF;
+    color: #f1ecec;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);   
+    
+}
+.save-button:hover {
+    background-color: #8c8bc5;
+}
+
+
+.images {
+    width: calc(60% - 20px);
+    height: 400px;
+    margin: 10px 20%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f1ecec;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);  
+}
+
+.image-line {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    overflow-x: auto;
+}
+
+.image-line img {
+    height: 100%;
+    min-width: 45%;
+    object-fit: cover;
+    margin-right: 2px;
+}
+
+
+.images .add {
+    display: flex;
+    margin-top: 10px;
+}
+.images input {
+    padding: 10px;
+    font-size: 15px;
+    width: calc(60% - 20px);
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.add-image {
+    margin: 0px 5%;
+    width: 30%;
+    background-color: #9D9CCF;
+    color: #f1ecec;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);  
+}
+
+.add-image:hover {
+    background-color: #8c8bc5;
+}

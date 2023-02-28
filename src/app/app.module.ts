@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AnnouncementPageComponent } from './pages/announcement-page/announcement-page.component';
 import { AnnoncementListPageComponent } from './pages/annoncement-list-page/annoncement-list-page.component';
+import { CreateAnnouncementPageComponent } from './pages/create-announcement-page/create-announcement-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { AnnoncementListPageComponent } from './pages/annoncement-list-page/anno
     NavbarComponent,
     FooterComponent,
     AnnouncementPageComponent,
-    AnnoncementListPageComponent
+    AnnoncementListPageComponent,
+    CreateAnnouncementPageComponent
   ],
   imports: [
     BrowserModule,

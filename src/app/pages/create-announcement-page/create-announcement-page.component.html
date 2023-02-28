@@ -1,0 +1,62 @@
+<navbar></navbar>
+<div class="item" style="display: flex;">
+    <div class="block">
+        <p>Производитель</p>
+        <select [(ngModel)]="manufacturer" (change)="changeManufacturer()">
+            <option *ngFor="let m of manufacturers" [ngValue]="m">{{m}}</option>
+        </select>
+    </div>
+    <div class="block" *ngIf="manufacturer != ''">
+        <p>Модель</p>
+        <select [(ngModel)]="model" (change)="changeModel()">
+            <option *ngFor="let m of models" [ngValue]="m">{{m}}</option>
+        </select>
+    </div>
+    <div class="block" *ngIf="model != ''">
+        <p>Поколение</p>
+        <select [(ngModel)]="announcement.car">
+            <option *ngFor="let c of cars" [ngValue]="c">{{c.generation}}</option>
+        </select>
+    </div>
+</div>
+
+<div class="item">
+    <p class="normal">Цвет</p>
+    <input type="text" [(ngModel)] = "announcement.color">
+</div>
+
+<div class="item">
+    <p class="normal">Пробег</p>
+    <input type="number" [(ngModel)] = "announcement.mileage">
+</div>
+
+<div class="item">
+    <p class="normal">Год выпуска</p>
+    <input type="number" [(ngModel)] = "announcement.yearOfManufacture">
+</div>
+
+<div class="item">
+    <p class="normal">Цена</p>
+    <input type="number" [(ngModel)] = "announcement.price">
+</div>
+
+
+<div class="images">
+    <p class="normal">Фотографии</p>
+    <div class="image-line">
+        <img *ngFor="let photo of photos" src="{{photo.url}}">
+    </div>
+
+    <div class="add">
+        <input type="text" [(ngModel)]="imageURL">
+        <button class="add-image" (click)="addPhoto()">Добавить</button>
+    </div>
+
+</div>
+
+<div class="big-item">
+    <p class="normal">Описание</p>
+    <textarea [(ngModel)]="announcement.sellerDescription"></textarea>
+</div>
+
+<button class="save-button" (click)="save()">Сохранить</button>
